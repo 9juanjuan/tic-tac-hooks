@@ -1,11 +1,24 @@
 import React, { useState} from 'react'; 
+// import selectTile from './selectTile';
+
+// const selectTile = () => {
+//     console.log('Selected tile')
+// }
 
 const GameTile = props => {
-    const [selected, setSelected] = useState('true');
+    const [player, setPlayer] = useState(1); 
+    const [selected, setSelected] = useState(false);
+    function selectTile () {
+        selected ? setSelected(false) : setSelected(true);
+
+    }
+    let icon = (player===1 && selected ) ? 'X' :(player===2 && selected) ? 'O' : null;
+
+
 
     return (
-        <div style={tileStyle} onClick={useState}>
-             X
+        <div style={tileStyle} onClick={selectTile}>
+            {icon} 
         </div>
 
     )
