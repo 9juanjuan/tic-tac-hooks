@@ -10,7 +10,6 @@ function App() {
     </div>
   );
 }
-
 const titleStyle= {
   margin: 'auto',
   marginTop : '20px',
