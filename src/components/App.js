@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GameBoard from './GameBoard';
 function App() {
+  const [activePlayer, setActivePlayer] = useState(1);
+
   return (
     <div>
       <div style={titleStyle}>
-      Tic-Tac-Hooks
+      Tic-Tac-Hooks......Player {activePlayer}
       </div>
-      <GameBoard/>
+      <GameBoard change={setActivePlayer} player={activePlayer}/>
     </div>
   );
 }

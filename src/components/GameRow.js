@@ -4,9 +4,9 @@ import GameTile from './GameTile'
 const GameRow = props => {
     return (
         <div style={rowStyle}> 
-            <GameTile/>
-            <GameTile/>
-            <GameTile/>
+            <GameTile change={props.change} player ={props.player}/>
+            <GameTile change={props.change} player ={props.player} />
+            <GameTile change={props.change} player ={props.player}/>
         </div>
 
     )
